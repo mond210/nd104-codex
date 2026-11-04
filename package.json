@@ -1,0 +1,19 @@
+{
+  "name": "nd104-codex",
+  "version": "0.1.0",
+  "description": "Show OpenAI Codex rate limits on the ND104 keyboard display via USB HID",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "start": "node push-daemon.js",
+    "check": "node check-quota.js",
+    "once": "node push-daemon.js --once",
+    "dry": "node push-daemon.js --dry-run",
+    "demo": "node push-daemon.js --demo",
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "node-hid": "^3.3.0",
+    "sharp": "^0.35.3"
+  }
+}
